@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Lista de Tareas</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>TASK LIST</h1>
+      <div class="input-area">
+        <input type="text" id="taskInput" placeholder="Cree una tarea..." />
+        <button id="addTaskButton" disabled>+</button>
+      </div>
+      <div id="error-message" class="error">
+        "A task must be provided".
+      </div>
+      <ul id="taskList">
+        <li>
+          <span>Welcome to the Task List!</span>
+          <button class="delete-button">Delete</button>
+          <button class="edit-button">Edit</button>
+        </li>
+      </ul>
+      <div class="counters">
+        <span>Total: </span>
+        <span>Complete: </span>
+        <span>Incomplete: </span>
+      </div>
+    </div>
+  </body>
+</html>
