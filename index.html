@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Lista de Tareas</title>
-  </head>
-  <body>
+</head>
+<body>
     <div class="container">
-      <h1>TASK LIST</h1>
-      <div class="input-area">
-        <input type="text" id="taskInput" placeholder="Cree una tarea..." />
-        <button id="addTaskButton" disabled>+</button>
-      </div>
-      <div id="error-message" class="error">
-        "A task must be provided".
-      </div>
-      <ul id="taskList">
-        <li>
-          <span>Welcome to the Task List!</span>
-          <button class="delete-button">Delete</button>
-          <button class="edit-button">Edit</button>
-        </li>
-      </ul>
-      <div class="counters">
-        <span>Total: </span>
-        <span>Complete: </span>
-        <span>Incomplete: </span>
-      </div>
+        <h1 style="text-align: center;">Lista de tareas</h1>
+        <div class="input-area">
+            <input type="text" id="task-input" placeholder="Nueva tarea">
+            <button>Agregar</button>
+        </div>
+        <div class="error" id="error-message">Por favor ingresar tarea</div>
+
+        <ul class="task-list">
+            <li class="task-item">
+                <input type="checkbox">
+                <span class="task-text"></span>
+                <div class="task-buttons">
+                    <button class="edit-button">Editar</button>
+                    <button class="eliminar">Eliminar</button>
+                </div>
+            </li>
+        </ul>
+
+        <div class="summary">
+
+            <span>total: </span>
+            <span>Completas: </span>
+            <span>Incompletas: </span>
+        </div>
     </div>
-  </body>
+</body>
 </html>
