@@ -2,95 +2,114 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #304633;
-    color: #fff;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     min-height: 100vh;
-  }
-  
-  .container {
-    background-color: #0e1c20;
-    padding: 40px;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 990px;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 40px;
-    color: #ffffff;
-  }
-  
-  .input-area {
+    overflow: hidden; 
+    background-color: #34495e;
+    color: #fff; 
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; 
+    background-color: #2c3e50; 
+}
+
+.input-area {
     display: flex;
-    margin-bottom: 20px;
-  }
-  
-  input[type="text"] {
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
     flex-grow: 1;
     padding: 10px;
-    border: none;
-    border-radius: 4px;
-    margin-right: 10px;
-    background-color: #4e5461;
-    color: #fff;
-  }
-  
-  button {
-    background-color: #aa698d;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #456; 
+    color: #fff; 
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #e67e22; 
     color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-  }
-  
-  .error {
-    color: red;
-    font-size: 14px;
-    margin-top: 5px;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #eee;
-    background-color: #4e5461;
-  }
-  
-  li span {
-    flex-grow: 1;
-    margin-right: 10px;
-  }
-  
-  .edit-button,
-  .delete-button {
-    background-color: transparent;
     border: none;
     cursor: pointer;
-    font-size: 16px;
-    margin: 0 5px;
-    transition: color 0.5s ease;
-  }
-  
-  button:hover {
-    background-color: #09ff00;
-  }
-  
-  .counters {
-    margin-top: 20px;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+   
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer; 
+}
+
+.task-text {
+    flex-grow: 1;
+}
+
+.task-buttons {
+    display: flex;
+}
+
+.task-buttons .eliminar {
+    margin-left: 5px;
+    background-color: #e74c3c; 
+}
+
+.edit-button {
+    background-color: #2ecc71; 
+}
+
+.summary {
+    margin-top: 1rem;
     display: flex;
     justify-content: space-around;
-  }
-  
-  .counters span {
-    color: #f3f4f5;
-  }
+    color: #fff; 
+}
+
+/* Estilos para hacerlo responsive */
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+    }
+
+    .input-area {
+        flex-direction: column; 
+    }
+
+    input[type="text"] {
+        margin-bottom: 10px;
+    }
+
+    .task-item {
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+
+    .task-buttons {
+        margin-top: 10px;
+    }
+}    
